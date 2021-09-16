@@ -46,7 +46,6 @@ html {
 
 body {
   font-size: 16px;
-  margin: 0;
   font-family: "Sukhumvit Set", sans-serif;
   font-weight: 300;
   background-color: #e5e5e5;
@@ -95,7 +94,7 @@ p {
 
   &__content {
     max-width: 1720px;
-    padding: 0 1.5rem;
+    padding: 0 15px;
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
@@ -131,7 +130,7 @@ p {
       list-style: none;
 
       &:not(:last-child) {
-        margin-right: 6.4rem;
+        margin-right: 64px;
       }
     }
 
@@ -197,6 +196,7 @@ p {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 5px;
 
 
   &__bg-txt {
@@ -208,6 +208,7 @@ p {
     color: #FFFFFF;
     opacity: 0.06;
     flex-basis: 10%;
+    
   }
 
   &-content {
@@ -215,7 +216,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-basis: 80%;
+    flex-basis: 60%;
   }
 
   &-title {
@@ -223,7 +224,7 @@ p {
     max-width: 867px;
     font-family: "Saudagar";
     font-weight: 400;
-    font-size: 3.1rem;
+    font-size: 3rem;
     line-height: 130%;
     text-align: center;
     text-transform: uppercase;
@@ -244,16 +245,13 @@ p {
     line-height: 172%;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
-
   }
 }
 
 .order-one {
   height: 150vh;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
 
   &__wrapper {
     max-width: 1460px;
@@ -264,7 +262,8 @@ p {
   &__img {
     display: flex;
     justify-content: center;
-    transform: translate(0, -25vh);
+    transform: translate(0, -15vh);
+    
   }
 
   &__bg-img {
@@ -330,6 +329,9 @@ p {
 
 
   }
+  &__img-res{
+    display: none;
+  }
 
   .content-text {
     height: 318px;
@@ -358,7 +360,7 @@ p {
 }
 
 .order-three {
-  height: 180vh;
+  height: 200vh;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -400,7 +402,7 @@ p {
 
   &__mobile-pic {
     position: absolute;
-    height: 40vmax;
+    height: 38vmax;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -536,13 +538,13 @@ p {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    flex-wrap: wrap;
     align-content: center;
 
   }
 
   .copyring {
     color: #fff;
+    font-size: 1rem;
 
     span {
       margin-right: 8px;
@@ -576,10 +578,6 @@ p {
 
   .header-top div {
     padding: 20px;
-  }
-
-  .header-main__text {
-    font-size: 15rem;
   }
 
   .about-content {
@@ -634,8 +632,8 @@ p {
 }
 
 @media (max-width: 767px) {
-  .header-main__text {
-    font-size: 12rem;
+  html{
+    font-size: 12px
   }
 
   .header-app__item:not(:last-child) {
@@ -644,14 +642,6 @@ p {
 
   .header-top {
     flex-direction: column;
-  }
-
-  .about-title {
-    font-size: 3rem;
-  }
-
-  .about-text {
-    font-size: 1rem;
   }
 
   .order-two__content {
@@ -666,48 +656,102 @@ p {
 }
 
 @media (max-width: 576px) {
+  html,body{
+    font-size: 10px;
+  }
   .header-top {
     flex-direction: column;
+    flex: 1;
   }
-
-  .header-main__text {
-    font-size: 10rem;
+  .header__content{
+    position: relative;
+    justify-content: space-evenly;
+    min-height: 80vh;
   }
+  .header-main{
+    flex: 1;
+  }
+  
 
   .header-app__item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 10vh;
     margin-right: 0;
   }
-
-  .header-app__list {
-    flex-direction: column;
+  .header-app{
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
   }
-
-  .header-main__text {
-    font-size: 7rem;
+  
+  .header-app__list{
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
   }
+  .header-top div{
+    padding: 0;
+}
+.header-app__item:not(:last-child){
+  margin-bottom: 0;
+}
+.header-app__link img {
+  margin-right: 4px;
+}
+.header-main__text p{
+  font-size: 60%;
+}
 
+.about{
+  height: 70vh;
+}
+.about-txt{
+  justify-content: space-evenly;
+}
   .about-title {
-    font-size: 2rem;
+    margin-bottom: 0;
   }
-
-  .about-text {
-    font-size: 0.8rem;
+  .about-content{
+    flex-basis: 80%;
   }
-
   .order-one {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .order-one__wrapper{
+    flex-basis: 65%;
+  }
+  .order-one__content{
+    margin-bottom: 50px;
+  }
+  .order-one__img{
+    transform: translate(0);
+    margin-bottom: 50px;
   }
 
   .content-text__title {
-    font-size: 2rem;
     margin-bottom: 0.7rem;
   }
-
-  .content-text__desc {
-    font-size: 1rem;
+  .order-two{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 60vh;
+    justify-content: space-between;
   }
-
+  .order-two__content{
+    flex-basis: 25%;
+  }
+  .order-two__img-pic{
+    display: none;
+    height: 0;
+  }
+  .order-two__img-res{
+    display: block;
+  }
+  .order-two .content-text{
+    height: 0;
+  }
   .order-three__content-top {
     justify-content: space-between;
   }
@@ -715,6 +759,20 @@ p {
   .order-three {
     height: 130vh;
   }
+  .order-three__mobile {
+    min-width: 90%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+.elips-pic {
+  max-width: 50vw;
+}
 
   .order-three__content {
     height: 120vh;
@@ -745,31 +803,31 @@ p {
   }
 
   .footer>.container {
-    flex-direction: column;
+    
     height: 100px;
-    padding: 25px 0;
+    padding: 25px 15px;
   }
-
+  .subscribe__img{
+    display: none;
+    width: 0;
+  }
+  .subscribe{
+    justify-content: center;
+  }
+  
 
 
 }
 
 @media (max-width: 320px) {
-  .header-main__text {
-    font-size: 6rem;
-  }
-
-  .header-main__title {
-    font-size: 1.5rem;
-  }
-
+  
   .order-one {
     height: 70vh;
   }
 
   .order-one__img {
 
-    transform: translate(0, -15vh);
+    transform: translate(0, 0);
   }
 
   .content-coming__btn {
@@ -790,12 +848,7 @@ p {
 
   .subscribe-form__title {
 
-    font-size: 3rem;
     margin-bottom: 30px;
-  }
-
-  .footer>.container {
-    justify-content: center;
   }
 
   .copyring {
@@ -803,3 +856,4 @@ p {
   }
 
 }
+
