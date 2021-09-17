@@ -430,9 +430,6 @@ p {
   .order-three__content {
     height: 180vh; }
 
-  .order-three__content-top {
-    justify-content: center; }
-
   .subscribe {
     flex-direction: column;
     align-items: center; }
@@ -550,21 +547,23 @@ p {
   .order-two .content-text {
     height: 0; }
 
+  .order-three__content {
+    width: 100%; }
+
   .order-three__content-top {
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 100%; }
 
   .order-three {
     height: 130vh; }
 
   .order-three__mobile {
-    min-width: 90%;
+    width: 95%;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
     align-content: center; }
 
   .elips-pic {
@@ -607,6 +606,9 @@ p {
 
   .order-one__img {
     transform: translate(0, 0); }
+
+  .order-two {
+    height: 50vh; }
 
   .content-coming__btn {
     text-align: center; }
