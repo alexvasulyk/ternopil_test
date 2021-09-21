@@ -147,7 +147,6 @@ p {
     font-family: "Saudagar";
     font-weight: 400;
     font-size: 15vw;
-    line-height: 85%;
     text-transform: uppercase;
     color: #FFFFFF;
     opacity: 0.06;
@@ -252,14 +251,13 @@ p {
     height: 110vh; }
 
 .order-three {
-  height: 200vh;
+  padding: 100px 0;
   background-color: #fff;
   display: flex;
   align-items: center; }
   .order-three__content {
     max-width: 1635px;
-    height: 160vh;
-    padding: 0 15px;
+    padding: 100px 15px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -273,18 +271,22 @@ p {
       color: #000000;
       text-align: center;
       margin: 50px 0; }
+    .order-three__content-coming__btn {
+      padding-top: 100px; }
   .order-three__content-top {
     width: 90%;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 100px 0; }
   .order-three__mobile {
     height: 541px;
     position: relative;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 50px 0; }
   .order-three__mobile-pic {
     position: absolute;
-    height: 38vmax;
+    height: 30vmax;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
@@ -293,7 +295,8 @@ p {
     flex-direction: column;
     align-items: center; }
     .order-three__content-coming__btn {
-      text-align: center; }
+      text-align: center;
+      padding: 50px 0; }
 
 .elips-pic {
   max-width: 30vw; }
@@ -414,21 +417,20 @@ p {
   .order-two__content {
     justify-content: center; }
 
-  .order-three__content-top {
-    flex-wrap: wrap;
-    margin-bottom: 100px; }
-
   .order-two__img-pic {
     height: 80vh; }
 
   .order-two__img {
     height: 80vh; }
 
-  .order-three {
-    height: 200vh; }
+  .order-three__mobile {
+    margin: 0; }
 
-  .order-three__content {
-    height: 180vh; }
+  .order-three__content-top {
+    padding: 0; }
+
+  .order-three__mobile-pic {
+    height: 45vmax; }
 
   .subscribe {
     flex-direction: column;
@@ -454,10 +456,17 @@ p {
     justify-content: baseline; }
 
   .order-two__img {
-    height: 50vh; } }
+    height: 50vh; }
+
+  .order-three__content-top {
+    flex-direction: column; } }
 @media (max-width: 576px) {
   html, body {
     font-size: 10px; }
+
+  .container, .header__content, .about-content, .order-one__wrapper, .order-two__content, .order-three__content, .subscribe {
+    padding-left: 20px;
+    padding-right: 20px; }
 
   .header-top {
     flex-direction: column;
@@ -547,18 +556,21 @@ p {
   .order-two .content-text {
     height: 0; }
 
+  .order-three {
+    padding: 0; }
+
   .order-three__content {
     width: 100%; }
 
   .order-three__content-top {
     justify-content: space-between;
-    width: 100%; }
-
-  .order-three {
-    height: 130vh; }
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px; }
 
   .order-three__mobile {
-    width: 95%;
+    width: 100%;
+    height: 400px;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -569,30 +581,30 @@ p {
   .elips-pic {
     max-width: 50vw; }
 
-  .order-three__content {
-    height: 120vh; }
-
   .content-coming__btn {
     text-align: center; }
 
   .btn-app {
     margin-bottom: 10px; }
 
+  .subscribe-form {
+    width: 100%; }
+
+  .subscribe-list {
+    width: 100%; }
+
   .subscribe-item__inpt {
-    width: 40vmax; }
+    width: 100%; }
 
   .subscribe-btn {
-    width: 30vmax; }
+    width: 100%; }
 
   .subscribe-item__inpt:last-child {
     margin-bottom: 30px; }
 
-  .subscribe-item__inpt {
-    width: 29vmax; }
-
   .footer > .container {
     height: 100px;
-    padding: 25px 15px; }
+    padding: 25px 20px; }
 
   .subscribe__img {
     display: none;
@@ -615,15 +627,6 @@ p {
 
   .btn-app {
     margin-bottom: 10px; }
-
-  .subscribe-item__inpt {
-    width: 30vmax; }
-
-  .subscribe-btn {
-    width: 25vmax; }
-
-  .subscribe-form__title {
-    margin-bottom: 30px; }
 
   .copyring {
     margin-top: 10px; } }
