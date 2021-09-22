@@ -236,6 +236,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
   }
 
   &-text {
@@ -261,7 +262,7 @@ p {
   &__img {
     display: flex;
     justify-content: center;
-    transform: translate(0, -15vh);
+    transform: translate(0, -10vh);
     
   }
 
@@ -391,9 +392,9 @@ p {
   }
 
   &__content-top {
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 100px 0;
   }
 
@@ -675,7 +676,10 @@ p {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .header-top {
+  .header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(../img/bg-smal.jpg);
+  }
+    .header-top {
     flex-direction: column;
     flex: 1;
   }

@@ -190,7 +190,7 @@ p {
   .order-one__img {
     display: flex;
     justify-content: center;
-    transform: translate(0, -15vh); }
+    transform: translate(0, -10vh); }
   .order-one__bg-img {
     min-width: 80vw; }
   .order-one__content {
@@ -274,9 +274,9 @@ p {
     .order-three__content-coming__btn {
       padding-top: 100px; }
   .order-three__content-top {
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 100px 0; }
   .order-three__mobile {
     height: 541px;
@@ -467,6 +467,9 @@ p {
   .container, .header__content, .about-content, .order-one__wrapper, .order-two__content, .order-three__content, .subscribe {
     padding-left: 20px;
     padding-right: 20px; }
+
+  .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url(../img/bg-smal.jpg); }
 
   .header-top {
     flex-direction: column;
