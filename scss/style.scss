@@ -48,7 +48,7 @@ body {
   font-size: 16px;
   font-family: "Sukhumvit Set", sans-serif;
   font-weight: 300;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   height: 100vh;
   margin: 0;
 }
@@ -157,11 +157,12 @@ p {
     align-items: center;
 
     &__text {
+      position: relative;
       font-family: "Saudagar";
       font-weight: 400;
       font-size: 17rem;
       text-transform: uppercase;
-      color: #ffffff;
+      color: transparent;
       margin: 0;
       margin-bottom: 40px;
     }
@@ -195,11 +196,14 @@ p {
   padding-bottom: 200px;
 
   &__bg-txt {
+    max-width: 1980px;
+    margin: 0 auto;
+    position: relative;
     font-family: "Saudagar";
     font-weight: 400;
     font-size: 15vw;
     text-transform: uppercase;
-    color: #ffffff;
+    color: transparent;
     opacity: 0.06;
     flex-basis: 10%;
     margin-bottom: 100px;
@@ -271,8 +275,10 @@ p {
 }
 
 .content-text {
+  position: relative;
   font-family: "Saudagar";
   font-weight: 400;
+  
 
   &__number {
     font-size: 1.8rem;
@@ -280,6 +286,7 @@ p {
     text-transform: uppercase;
     color: #dcac9b;
     margin: 0;
+    transition:.8s ease-in-out;
   }
 
   &__title {
@@ -458,6 +465,7 @@ p {
   }
 
   &-item {
+    position: relative;
     &__inpt {
       width: 25vmax;
       background-color: #1a1a1a;
@@ -497,6 +505,43 @@ p {
     outline: none;
     cursor: pointer;
   }
+  
+  .content-name{
+    font-weight: 300;
+      font-size: 1rem;
+      line-height: 165%;
+      text-transform: uppercase;
+      color: #8e8e8e;
+      cursor: text;
+  }
+  .inpt-name__label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s ease;
+  }
+  .subscribe-item__inpt:focus + .inpt-name__label{
+    transform: translateY(-2rem);
+    
+  }
+  .span-item{
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 165%;
+    text-transform: uppercase;
+    color: #8E8E8E;
+  }
+  .border-b{
+display: flex;
+justify-content: space-between;
+opacity: 0.7;
+border-bottom: 2px solid #FFFFFF;
+border-radius: 2px;
+padding-bottom: 14px;
+margin-bottom: 50px;
+  }
+  
 }
 
 .footer {
@@ -520,6 +565,81 @@ p {
     }
   }
 }
+
+/*animation start*/
+.header-main__text p::before {
+content: attr(data-text);
+position: absolute;
+top: 0;
+left:0;
+width: 100%;
+height: 100%;
+color: #fff;
+overflow: hidden;
+white-space: nowrap;
+animation: typing 5s linear infinite;
+}
+
+.about__bg-txt p::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-text);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation:typing 10s linear infinite ;
+
+}
+.content-text:hover .content-text__number{
+  transform: translateX(-50px);
+}
+@keyframes typing{
+  0%{
+    width: 0;
+  }
+  50%{
+    width: 100%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+
+.el-one{
+  order: 1;
+}
+.el-two{
+  order: 3;
+}
+.el-three{
+  animation:6s linear 1s anim-elips infinite;
+
+}
+@keyframes anim-elips{
+0%{order: 4;
+}
+50%{order: 2;
+}
+100%{order: 0;
+}
+}
+
+
+
+// @keyframes animelemnet {
+//   0%{
+//     order: 3;
+//   }
+//   25%{
+//     order: 2;
+//   }
+//   50%{
+//     order: 1;
+//   }
+// }
+/*animation end*/
 
 @media (max-width: 1169px) {
   .order-one__content {
@@ -565,6 +685,8 @@ p {
   .subscribe-item__inpt {
     width: 100%;
   }
+  
+
 }
 
 @media (max-width: 767px) {
@@ -732,6 +854,7 @@ p {
   .subscribe-item__inpt:last-child {
     margin-bottom: 30px;
   }
+  
   .footer > .container {
     height: 100px;
     padding: 25px 20px;
