@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="header-main">
-          <div class="header-main__text">Salon</div>
+          <div class="header-main__text"><p data-text="Salon">Salon</p></div>
           <h1 class="header-main__title">
             Quality Lashes from the comfort of your home
           </h1>
@@ -45,7 +45,7 @@
       </div>
     </header>
     <section class="about">
-      <div class="about__bg-txt">Coming&nbsp;Soon</div>
+      <div class="about__bg-txt" ><p data-text="Coming Soon">Coming&nbsp;Soon</p></div>
       <div class="about-content">
         <p class="about-title">
           Lash Experts to&nbsp;your doors within&nbsp;hours
@@ -66,10 +66,11 @@
       </div>
     </section>
     <section class="order-one">
+      <div class="order-one__img">
+        <img src="./img/pictures_02.png" alt="" class="order-one__bg-img" />
+      </div>
       <div class="order-one__wrapper">
-        <div class="order-one__img">
-          <img src="./img/pictures_02.png" alt="" class="order-one__bg-img" />
-        </div>
+        
         <div class="order-one__content">
           <img
             class="order-one__content-img"
@@ -77,7 +78,7 @@
             alt="Photo Telephone"
           />
           <div class="content-text">
-            <span class="content-text__number">01</span>
+            <p class="content-text__number">01</p>
             <p class="content-text__title">Make your own schedule</p>
             <p class="content-text__desc">
               Work then you want, without having to go into a salon everyday.
@@ -87,25 +88,24 @@
       </div>
     </section>
     <section class="order-two">
+      <img src="./img/responsive.jpg" alt="" class="order-two__img-res"/>
       <div class="order-two__content">
         <div class="content-text">
-          <span class="content-text__number">02</span>
+          <p class="content-text__number">02</p>
           <p class="content-text__title">Make good money</p>
           <p class="content-text__desc">
             Who says artists can’t get paid well? Our clients appreciate your
             mastery.
           </p>
         </div>
-        <div class="order-two__img-pic">
-          <img src="./img/pic_04.png" alt="" class="order-two__img" />
-        </div>
+          <img src="./img/pic_04.png" alt="" class="order-two__img"/>
       </div>
     </section>
     <section class="order-three">
       <div class="order-three__content">
         <div class="order-three__content-top">
           <div class="content-text">
-            <span class="content-text__number">03</span>
+            <p class="content-text__number">03</p>
             <p class="content-text__title">Make your skills sharper</p>
             <p class="content-text__desc">
               Apply to be a Master lash artist with increased marketing perks
@@ -113,7 +113,7 @@
             </p>
           </div>
           <div class="content-text">
-            <span class="content-text__number">04</span>
+            <p class="content-text__number">04</p>
             <p class="content-text__title">Make it personal</p>
             <p class="content-text__desc">
               Get to know your clients and build a bigger book of clients
@@ -122,9 +122,9 @@
           </div>
         </div>
         <div class="order-three__mobile">
-          <img class="elips-pic" src="./img/elips.svg" alt="" />
-          <img class="elips-pic" src="./img/elips.svg" alt="" />
-          <img class="elips-pic" src="./img/elips-2.svg" alt="" />
+          <img class="elips-pic el-one" src="./img/elips.svg" alt="" />
+          <img class="elips-pic el-two" src="./img/elips.svg" alt="" />
+          <img class="elips-pic el-three" src="./img/elips-2.svg" alt="" />
           <img class="order-three__mobile-pic" src="./img/phone.png" alt="" />
         </div>
 
@@ -152,57 +152,81 @@
           <li class="subscribe-item">
             <p class="subscribe-form__title">subscribe</p>
           </li>
-          <li class="subscribe-item">
+          <li class="subscribe-item inpt-name">
             <input
               class="subscribe-item__inpt"
+              id='name'
               type="text"
-              placeholder="First name"
+              placeholder=""
             />
+            <label for="name" class="inpt-name__label">
+              <span class="content-name">First Name</span>
+            </label>
           </li>
-          <li class="subscribe-item">
+          <li class="subscribe-item inpt-name">
             <input
               class="subscribe-item__inpt"
               type="text"
-              placeholder="Last name"
+              id="class-name"
+              placeholder=""
             />
+            <label for="class-name" class="inpt-name__label">
+              <span class="content-name">Last Name</span>
+            </label>
           </li>
-          <li class="subscribe-item">
-            <input
-              class="subscribe-item__inpt"
-              type="text"
-              placeholder="Interested in being a client or lashes"
-            />
+          <li class="subscribe-item inpt-select border-b">
+            <span class="span-item">Interested in being a client</span>
+            <img class="span-img" src="./img/arrow-down.svg" alt="">
           </li>
-          <li class="subscribe-item">
+          <li class="subscribe-item inpt-name">
             <input
               class="subscribe-item__inpt"
               type="text"
-              placeholder="City"
+              id="city"
+              placeholder=""
             />
+            <label for="city" class="inpt-name__label">
+              <span class="content-name">City</span>
+            </label>
           </li>
-          <li class="subscribe-item">
+          <li class="subscribe-item inpt-name">
             <input
               class="subscribe-item__inpt"
               type="text"
-              placeholder="State"
+              id="state"
+              placeholder=""
             />
+            <label for="state" class="inpt-name__label">
+              <span class="content-name">State</span>
+            </label>
           </li>
-          <li class="subscribe-item">
+          <li class="subscribe-item inpt-name">
             <input
               class="subscribe-item__inpt"
               type="text"
-              placeholder="Phone Number"
+              id="number"
+              placeholder=""
             />
+            <label for="number" class="inpt-name__label">
+              <span class="content-name">Phone Number</span>
+            </label>
           </li>
-          <li class="subscribe-item">
+          <li class="subscribe-item inpt-name">
             <input
               class="subscribe-item__inpt"
               type="text"
-              placeholder="Email"
+              id="email"
+              placeholder=""
             />
+            <label for="email" class="inpt-name__label">
+              <span class="content-name">Email</span>
+            </label>
+          </li>
+          <li>
+            <button class="subscribe-btn"><span>Subscribe</span></button>
+
           </li>
         </ul>
-        <button class="subscribe-btn"><span>Subscribe</span></button>
       </div>
     </section>
     <footer class="footer">
