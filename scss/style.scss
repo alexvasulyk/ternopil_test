@@ -610,48 +610,39 @@ animation: typing 5s linear infinite;
 
 
 .el-one{
-  order: 1;
+  order: 3;
+  transition: 6s linear;
 
 }
 .el-two{
-  order: 3;
+  order: 4;
+  transition: 6s linear;
 
 }
 .el-three{
-  animation:4s elips infinite;
-  transition: 6s ease;
-  order: 4;
-
+  animation: elips 20s infinite, animate_grow 6s infinite;
+  transition: 6s linear;
+  order: 5;
 }
 
 
 @keyframes elips{
-0%{order: 4;
-  transform: rotate(0deg); 
-
-  
-}
-50%{order: 2;
-  transform: rotate(90deg);
-
-  
-}
-100%{order: 0;
-  transform: rotate(0deg);
-
-  
-}
-}
+0%{order: 4;}
+25%{order: 3;}
+50%{order: 2;}
+75%{order: 3;}
+100%{order: 4;}
+} 
 
 @keyframes animate_grow {
 	0% {
-		transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1) rotate(0deg);
 	}
 	50% {
-		transform: scale3d(0.9, 0.9, 0.9);
+		transform: scale3d(0.9, 0.9, 0.9) rotate(90deg);
 	}
 	100% {
-		transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1) rotate(0deg);
 	}
 }
 @for $i from 1 through 3{
